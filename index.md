@@ -22,7 +22,7 @@ github      :
 
 This short guide will walk through the steps in setting up of a local "Jekyll" installation so that the website can be designed and its content reviewed before committing to Github.
 
---- .class #id 
+---
 
 ## Requirements
 
@@ -37,39 +37,41 @@ This short guide will walk through the steps in setting up of a local "Jekyll" i
 
 ## Considerations
 
-+ In configuring Jekyll, it is important to bear in mind that Github's user page is located at root (USERNAME.github.io) while its project page is served from a sub-directory (USERNAME.github.io/NAME_OF_REPO). The parameter `baseurl` in `_config.yml` should be set correspondingly as follow:
+- In configuring Jekyll, it is important to bear in mind that Github's user page is located at root (USERNAME.github.io) while its project page is served from a sub-directory (USERNAME.github.io/NAME_OF_REPO). The parameter `baseurl` in `_config.yml` should be set correspondingly as follow:
     * an empty string `""` for a user page and 
     * `"/NAME_OF_REPO"` for a project page
-+ To preview the project website locally, it is necessary to temporarily override the baseurl setting using `jekyll serve --baseurl ""` so that the pages can be found at "localhost:4000".
+- To preview the project website locally, it is necessary to temporarily override the baseurl setting using `jekyll serve --baseurl ""` so that the pages can be found at "localhost:4000".
 
 ---
 
-+ The Jekyll engine at Github only supports a selected set of plugins and it may not be the same version as the local installation. To avoid possible conflicts, put
+## Considerations (cont)
+
+- The Jekyll engine at Github only supports a selected set of plugins and it may not be the same version as the local installation. To avoid possible conflicts, put
 `gem 'github-pages'` in a `Gemfile` in the repo's root directory followed by a command `bundle install`.
-+ Put `_site` into `.gitignore`. The folder is generated for the local Jekyll installation only. Jekyll will re-build the site every time following a new upload or commit.
+- Put `_site` into `.gitignore`. The folder is generated for the local Jekyll installation only. Jekyll will re-build the site every time following a new upload or commit.
 
 ---
 
 ## Creating Project Pages
 
 * Clone an existing repo
-    + `$ git clone github.com/user/repo.git`
+    - `$ git clone github.com/user/repo.git`
 * Create and switch to gh-pages branch
-    + `$ cd repo`
-    + `$ git checkout --orphan gh-pages`
+    - `$ cd repo`
+    - `$ git checkout --orphan gh-pages`
 * Remove all existing files
-    + `$ git rm -rf .`
+    - `$ git rm -rf .`
 
 ---
 
-## Project Pages (cont)
+## Creating Project Pages (cont)
 
 * Scaffold new Jekyll site
-    + `$ jekyll new .`
+    - `$ jekyll new .`
 * Make changes and create content
 * Publish to Github
-    + `$ git commit -am "new content added"`
-    + `$ git push origin gh-pages`
+    - `$ git commit -am "new content added"`
+    - `$ git push origin gh-pages`
 
 ----
 
