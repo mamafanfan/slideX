@@ -3,7 +3,9 @@ title       : Github Project Pages Using Jekyll
 subtitle    : a short setup guide
 author      : mamafanfan
 job         : 
-framework   : io2012    # {io2012, html5slides, shower, dzslides, ...}
+framework   : revealjs    # {io2012, html5slides, shower, dzslides, revealjs ...}
+revealjs:
+    transition: fade
 highlighter : hightlight.js # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # {towmorrow}
 widgets     : []            # {mathjax, quiz, bootstrap}
@@ -48,7 +50,7 @@ This short guide will walk through the steps in setting up of a local "Jekyll" i
 
 ---
 
-## Creating Project Page
+## Creating Project Pages
 
 * Clone an existing repo
     + `$ git clone github.com/user/repo.git`
@@ -60,7 +62,9 @@ This short guide will walk through the steps in setting up of a local "Jekyll" i
 
 ---
 
-* Scalfold new Jekyll site
+## Project Pages (cont)
+
+* Scaffold new Jekyll site
     + `$ jekyll new .`
 * Make changes and create content
 * Publish to Github
@@ -69,4 +73,7 @@ This short guide will walk through the steps in setting up of a local "Jekyll" i
 
 ----
 
-# END
+## ...
+
+**END**
+
