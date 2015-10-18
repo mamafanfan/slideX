@@ -1,33 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
   <title>Github Project Pages Using Jekyll</title>
-  <meta name="description" content="">
+  <meta charset="utf-8">
+  <meta name="description" content="Github Project Pages Using Jekyll">
   <meta name="author" content="mamafanfan">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
-  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
-  <link rel="stylesheet" href="libraries/highlighters/hightlight.js/css/tomorrow.css" id="theme">
-  <!--[if lt IE 9]>
-  <script src="lib/js/html5shiv.js"></script>
-  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/prettify/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
 
 </head>
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section class='' data-state='' id='slide-1'>
-  <h2>Introduction</h2>
-  <p><a href="https://github.com" title="Github">Github</a> provides free hosting of a static website for each user and for each project. These websites are generated using <a href="https://github.com/jekyll/jekyll" title="Jekyll at Github">Jekyll</a> which will process all files uploaded to an individual user account (master branch of a special repo named <code>USERNAME.github.io</code>) or any project repos with a <code>gh-pages</code> branch.</p>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Github Project Pages Using Jekyll</h1>
+    <h2>a short setup guide</h2>
+    <p>mamafanfan<br/></p>
+  </hgroup>
+    <a href="https://github.com/mamafanfan/slideX/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="https://github.com" title="Github">Github</a> provides free hosting of a static website for each user and for each project. These websites are generated using <a href="https://github.com/jekyll/jekyll" title="Jekyll at Github">Jekyll</a> which will process all files uploaded to an individual user account (master branch of a special repo named <code>USERNAME.github.io</code>) or any project repos with a <code>gh-pages</code> branch.</p>
 
 <p>This short guide will walk through the steps in setting up of a local &quot;Jekyll&quot; installation so that the website can be designed and its content reviewed before committing to Github.</p>
 
-</section>
-<section class='class' data-state='' id='id'>
-  <h2>Requirements</h2>
-  <ul>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Requirements</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
 <li><a href="http://jekyllrb.com/docs/installation/" title="Jekyll Installation Requirements">Jekyll</a>
 
 <ul>
@@ -39,10 +74,16 @@
 <li><a href="http://bundler.io/" title="Bundler Install">Bundler</a></li>
 </ul>
 
-</section>
-<section class='' data-state='' id='slide-3'>
-  <h2>Considerations</h2>
-  <ul>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Considerations</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
 <li>In configuring Jekyll, it is important to bear in mind that Github&#39;s user page is located at root (USERNAME.github.io) while its project page is served from a sub-directory (USERNAME.github.io/NAME_OF_REPO). The parameter <code>baseurl</code> in <code>_config.yml</code> should be set correspondingly as follow:
 
 <ul>
@@ -52,19 +93,28 @@
 <li>To preview the project website locally, it is necessary to temporarily override the baseurl setting using <code>jekyll serve --baseurl &quot;&quot;</code> so that the pages can be found at &quot;localhost:4000&quot;.</li>
 </ul>
 
-</section>
-<section class='' data-state='' id='slide-4'>
-  
-  <ul>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <article data-timings="">
+    <ul>
 <li>The Jekyll engine at Github only supports a selected set of plugins and it may not be the same version as the local installation. To avoid possible conflicts, put
 <code>gem &#39;github-pages&#39;</code> in a <code>Gemfile</code> in the repo&#39;s root directory followed by a command <code>bundle install</code>.</li>
 <li>Put <code>_site</code> into <code>.gitignore</code>. The folder is generated for the local Jekyll installation only. Jekyll will re-build the site every time following a new upload or commit.</li>
 </ul>
 
-</section>
-<section class='' data-state='' id='slide-5'>
-  <h2>Creating Project Pages</h2>
-  <ul>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Creating Project Pages</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
 <li>Clone an existing repo
 
 <ul>
@@ -83,10 +133,16 @@
 </ul></li>
 </ul>
 
-</section>
-<section class='' data-state='' id='slide-6'>
-  <h2>Project Pages (cont)</h2>
-  <ul>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Project Pages (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
 <li>Scaffold new Jekyll site
 
 <ul>
@@ -101,39 +157,86 @@
 </ul></li>
 </ul>
 
-</section>
-<section class='' data-state='' id='slide-7'>
-  <h2>...</h2>
-  <p><strong>END</strong></p>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-</section>
-    </div>
-  </div>
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><strong>END</strong></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Requirements'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Considerations'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='NA'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Creating Project Pages'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Project Pages (cont)'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='...'>
+         7
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
 </body>
-  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
-  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- Google Prettify -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+  <script src='libraries/highlighters/prettify/js/lang-r.js'></script>
   <script>
-  // Full list of configuration options available here:
-  // https://github.com/hakimel/reveal.js#configuration
-  Reveal.initialize({
-    controls: true,
-    progress: true,
-    history: true,
-    center: true,
-    theme: Reveal.getQueryHash().theme || 'default', 
-    transition: Reveal.getQueryHash().transition || 'fade', 
-    dependencies: [
-    // Cross-browser shim that fully implements classList -
-    // https://github.com/eligrey/classList.js/
-      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
-      // Zoom in and out with Alt+click
-      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-      // Speaker notes
-      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-      // Remote control your reveal.js presentation using a touch device
-      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-      ]
-  });
-  </script>   
-
-</html>
+    var pres = document.getElementsByTagName("pre");
+    for (var i=0; i < pres.length; ++i) {
+      pres[i].className = "prettyprint linenums";
+    }
+    prettyPrint();
+  </script>
+  <!-- End Google Prettify --> 
+  </html>

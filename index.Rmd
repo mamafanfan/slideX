@@ -3,10 +3,10 @@ title       : Github Project Pages Using Jekyll
 subtitle    : a short setup guide
 author      : mamafanfan
 job         : 
-framework   : revealjs    # {io2012, html5slides, shower, dzslides, revealjs ...}
+framework   : io2012    # {io2012, html5slides, shower, dzslides, revealjs ...}
 revealjs:
     transition: fade
-highlighter : hightlight.js # {highlight.js, prettify, highlight}
+highlighter : prettify # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # {towmorrow}
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained     # {standalone, draft, selfcontained}
